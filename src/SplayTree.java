@@ -187,6 +187,9 @@ public class SplayTree<K extends Comparable<K>, V> implements Map<K, V> {
             left = left.left;
         }
 
+        private void setKey(K key) {
+        }
+
         /**
          * Metodo de la rotacion Zag
          */
