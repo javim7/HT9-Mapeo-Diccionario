@@ -43,6 +43,12 @@ public class Association<K,V> implements MapEntry<K,V>
         theValue = value;
     }
 
+    Map<K, V> diccionario;
+    public Association(Map<K, V> diccionario) {
+        this.diccionario = diccionario;
+    }
+
+
     /**
      * Constructs a pair from a key; value is null.
      *
@@ -93,6 +99,36 @@ public class Association<K,V> implements MapEntry<K,V>
     }
 
     /**
+     * Checks if a word is in the dictionary
+     * @param englishWord word in English
+     * @return boolean if it contains the word
+     */
+    public boolean containsWord(K englishWord) {
+
+        if(diccionario.get(englishWord) != null){
+            return true;
+            
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Gets the word in Spanish from an English word
+     * @param englishWord word in english
+     * @return the word in Spanish of word in english with asterisks if not found
+     */
+    public String getSpanishWord(K englishWord) {
+
+        if(containsWord(englishWord)) {
+            return (String) diccionario.get(englishWord);
+
+        } else {
+            return "*" + englishWord.toString() + "* ";
+        }
+    }
+
+    /**
      * Fetch key from association.  Should not return null.
      *
      * @post returns key from association
@@ -101,6 +137,17 @@ public class Association<K,V> implements MapEntry<K,V>
     public K getKey()
     {
         return theKey;
+    }
+
+    /**
+     * Sets the value of the key-value pair.
+     * 
+     * @param english palabra en ingles.
+     * @param spanish palabra en espanol
+     * 
+     */
+    public void addEntry(K english, V spanish) {
+        diccionario.put(english, spanish);
     }
 
     /**

@@ -9,12 +9,21 @@
  * */
 
 public class Factory<K extends Comparable<K>, V> {
-    public java.util.Map<K, V> getMap(int mapType) {
+
+    /**
+     * 
+     * @param mapType es la opcion que elige el usuario
+     * @return el tipo de mapa que se haya seleccionado
+     */
+    public java.util.Map<K, V> queMapa(int mapType) {
+
         switch (mapType) {
             case 1:
                 return new SplayTree<K, V>();
+
             case 2:
                 return new HashingMap<K, V>();
+
             default:
                 return null;
         }
