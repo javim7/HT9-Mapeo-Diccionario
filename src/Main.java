@@ -64,8 +64,14 @@ public class Main{
             while((linea = lector.readLine()) != null) {
 
                 //System.out.println(linea);
+
+                //removiendo los arituculos de la linea
+                String lineaNueva = linea.replace("el ", "");
+                lineaNueva = linea.replace("la ", "");
+
+
                 //separanado las filas por comas, espacios o simbolos
-                String[] palabras = linea.split("\\s+|,|\\( |\\[|/");
+                String[] palabras = lineaNueva.split("\\s+|,|\\( |\\[|/");
 
                 // excluyendo las palabras que no tienen definicion en el archivo
                 if(palabras[0].charAt(0) != '#' && palabras.length > 1) {
