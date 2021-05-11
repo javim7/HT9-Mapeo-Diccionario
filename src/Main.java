@@ -1,3 +1,6 @@
+//importando clases externas
+import java.util.*;
+
 /**
  * @author Mariono Reyes
  * @author Javier Mombiela
@@ -11,6 +14,12 @@
 public class Main{
 
     public static void main(String[] args) {
+
+        //creando variables
+        Factory fac = new Factory();
+        Scanner scan = new Scanner(System.in);
+
+        //pidiendo al usuario que implementacion quiere usar
         
     }
 }
