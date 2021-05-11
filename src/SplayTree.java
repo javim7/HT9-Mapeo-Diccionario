@@ -2,6 +2,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
+
+/**
+ * @author Mariono Reyes
+ * @author Javier Mombiela
+ *
+ * SplayTree.java esta es la clase
+ * que se utilizo para poder utilizar
+ * la implementacion de un splay tree.
+ *
+ * */
+
+
 public class SplayTree<K extends Comparable<K>, V> implements Map<K, V> {
     /**
      * El nodo extiende de la Associacion no por necesida, sino por conveniencia

@@ -4,6 +4,16 @@ import java.util.List;
 import java.util.Collection;
 import java.util.Set;
 
+/**
+ * @author Mariono Reyes
+ * @author Javier Mombiela
+ *
+ * HashingMap.java esta es la clase
+ * que se utilizo para poder utilizar
+ * la implementacion de un hashing map.
+ *
+ * */
+
 public class HashingMap<K extends Comparable<K>, V> implements Map<K, V> {
 
     private HashMap<K, V> stringMap=new HashMap<>();
