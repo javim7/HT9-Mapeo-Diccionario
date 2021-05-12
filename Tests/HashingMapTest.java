@@ -1,30 +1,38 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.HashMap;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class HashingMapTest {
+
+
+    @Test
+    void containsKey() {
+
+        HashingMap<String, String> Hashing= new HashingMap<>();
+
+        String clave = "woman";
+        String valor = "mujer";
+        Hashing.put(clave, valor);
+
+        boolean expected = true;
+        boolean result = Hashing.containsKey(clave);
+
+        assertEquals(expected, result);
+
+    }
 
     @Test
     void put() {
 
-        HashMap<String, String> stringMap=new HashMap<>();
+        HashingMap<String, String> Hashing= new HashingMap<>();
 
         String clave = "woman";
         String valor = "mujer";
+        String expected = null;
 
-        String result = stringMap.put(clave, valor);
+        String result = Hashing.put(clave, valor);
 
-        assertEquals("mujer", result);
+        assertEquals(expected, result);
 
     }
 
-    @Test
-    void containsKey() {
-    }
-
-    @Test
-    void get() {
-    }
 }
